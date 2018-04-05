@@ -16,10 +16,6 @@ class App extends Component {
 
         '2': {
           comment: 'Second comment'
-        },
-
-        '3': {
-          comment: 'Third comment'
         }
       }
     }
