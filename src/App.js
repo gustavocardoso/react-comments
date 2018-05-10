@@ -10,15 +10,13 @@ class App extends Component {
 
     this.state = {
       comments: {
-        '1': {
-          comment: 'First comment'
-        },
-
-        '2': {
-          comment: 'Second comment'
-        }
       }
     }
+
+    this.refComments = this.props.base.syncState('comments', {
+      context: this,
+      state: 'comments'
+    })
 
     this.postNewComment = this.postNewComment.bind(this)
   }
