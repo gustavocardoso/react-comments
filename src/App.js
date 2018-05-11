@@ -4,6 +4,8 @@ import 'bootstrap-css-only'
 import NewComment from './NewComment'
 import Comments from './Comments'
 
+import './css/app.css'
+
 class App extends Component {
   constructor(props) {
     super(props)
@@ -34,7 +36,12 @@ class App extends Component {
     const comments = { ...this.state.comments }
     const timestamp = Date.now()
 
+    comment.user = {
+      uid: this.state.user.uid,
+      name: this.state.user.displayName
+    }
     comments[`comm-${timestamp}`] = comment
+
     this.setState({
       comments: comments
     })
