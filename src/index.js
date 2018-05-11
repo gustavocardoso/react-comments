@@ -2,6 +2,6 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 import App from './App'
-import base from './config/base'
+import base, { auth, providers } from './config/base'
 
-ReactDOM.render(<App base={ base } />, document.getElementById('root'))
+ReactDOM.render(<App base={ base } auth={ auth } providers={ providers } />, document.getElementById('root'))
